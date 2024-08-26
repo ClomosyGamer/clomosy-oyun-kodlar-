@@ -1,0 +1,1038 @@
+var
+a,b,c,d,e,f,g,h,i,k,l,m,n,p,r,s,z,a1,b1,a11,b11,x,sayi:Integer;
+myform,takimform:tclform;
+takim,calis,sifirla,cikis:tclbutton;
+labelefes,labelefes11,labelfb,labelfb11,labelbjk,labelts:tcllabel;
+efeslogo1,fblogo1,baskonyalogo1,kizilyildizlogo1,zalgirislogo1,reallogo1,barcalogo1,cskalogo1,panalogo1,olimpiakoslogo1,milanologo1,monacologo1,asvellogo1,bayernlogo1,partizanlogo1,zenitlogo1:TclImage;
+efeslogo,fblogo,baskonyalogo,kizilyildizlogo,zalgirislogo,reallogo,barcalogo,cskalogo,panalogo,olimpiakoslogo,milanologo,monacologo,asvellogo,bayernlogo,partizanlogo,zenitlogo:TclImage;
+k1,k2:Integer;
+
+void cikis
+{
+  MyForm.BtnGoBackClick(self);
+}
+
+
+void takimsec
+{
+  takimform=tclform.create(self)
+ takimform.clSetWindowState(fwsMaximized);
+ //takimform.setformbgImage('https://w7.pngwing.com/pnefes/12/746/png-transparent-wall-decal-basketball-player-slam-dunk-sport-basketball.png')
+  //takimform.setformbgImage('https://papik.pro/uploads/posts/2021-12/1639227562_12-papik-pro-p-klipart-basketbol-13.png')
+  takimform.run;
+takimform.setformbgImage('https://w7.pngwing.com/pnefes/178/263/png-transparent-2017-18-euroleague-2010-11-euroleague-eurocup-basketball-2016-17-euroleague-2015-16-euroleague-nba.png')
+}
+
+void basla
+{
+  if (x<2)
+  {
+    showmessage('LÜTFEN TAKIM SEÇİNİZ')
+  }
+  else {
+  labelfb.visible=true
+  labelefes.visible=true
+  labelfb11.visible=true
+  labelefes11.visible=true
+
+a11=0;
+b11=0;
+
+ while ((a11 < 4) && (b11 < 4))
+ {
+
+for z=1 to 250 
+{
+  
+  a=trunc(random()*k1) ; 
+  b=trunc(random()*k2); 
+  
+ if (a>b)
+ {
+a1=a1+1}
+if (b>a)
+{
+b1=b1+1
+}
+
+
+
+}
+
+showmessage(+inttostr(a1)+'      '+' '+inttostr(b1))
+
+labelefes.Caption = inttostr(a1);
+labelfb.Caption = inttostr(b1);
+
+if a1>b1
+{
+  a11=a11+1
+  
+}
+if b1>a1
+{
+  b11=b11+1
+}
+labelfb11.Caption = inttostr(b11);
+labelefes11.Caption = inttostr(a11);
+
+  a1=0;
+  b1=0;
+  sifirla.visible=true
+}}
+}
+
+
+
+void sif
+{
+  
+  a1=0;
+  b1=0;
+  x=0;
+  k1=0
+  k2=0
+    labelfb11.Caption = '0'
+  labelefes11.Caption= '0'
+  labelfb.Caption = '0'
+  labelefes.Caption= '0'
+  a11=0
+  b11=0
+
+   efeslogo1.visible=false;
+   fblogo1.visible=false;
+   baskonyalogo1.visible=false
+   kizilyildizlogo1.visible=false
+   zalgirislogo1.visible=false;
+   reallogo1.visible=false;
+   barcalogo1.visible=false
+   cskalogo1.visible=false
+   panalogo1.visible=false;
+   olimpiakoslogo1.visible=false;
+   milanologo1.visible=false
+   monacologo1.visible=false;
+   asvellogo1.visible=false;
+   bayernlogo1.visible=false;
+   partizanlogo1.visible=false
+   zenitlogo1.visible=false
+  // showmessage(x)
+}
+
+ void fbsec
+{
+   
+  if (x==0)
+    {
+  x=x+1
+  fblogo1.position.x=480
+  fblogo1.position.y=330
+   fblogo1.visible=true;
+   k1=3.95
+       }
+   else if (x==1)
+       {
+   fblogo1.position.x=800
+  fblogo1.position.y=330
+  fblogo1.visible=true;
+  k2=3.92
+  x=x+1
+  }
+  else
+{
+  sif
+  }
+    
+    
+}
+
+
+
+
+
+void efessec
+{
+  
+   if (efeslogo1.visible==false)
+   {
+  if (x==0)
+
+{
+ efeslogo1.position.x=480
+  efeslogo1.position.y=330
+   efeslogo1.visible=true;
+  k1=3.99; 
+    x=1
+   }
+   else
+   {
+   efeslogo1.position.x=800
+  efeslogo1.position.y=330
+  efeslogo1.visible=true;
+   k2=3.99; 
+  x=2
+  }
+  }
+ 
+}
+
+
+void baskonyasec
+{
+  
+   if (baskonyalogo1.visible==false)
+   {
+  if (x==0)
+
+{
+ baskonyalogo1.position.x=480
+  baskonyalogo1.position.y=330
+   baskonyalogo1.visible=true;
+     k1=3.82; 
+    x=1
+   }
+   else
+   {
+ baskonyalogo1.position.x=800
+baskonyalogo1.position.y=330
+ baskonyalogo1.visible=true;
+   k2=3.82; 
+  x=2
+  }
+  }
+ 
+}
+  
+ void kizilyildizsec
+{
+  
+   if (kizilyildizlogo1.visible==false)
+   {
+  if (x==0)
+
+{
+ kizilyildizlogo1.position.x=480
+  kizilyildizlogo1.position.y=330
+   kizilyildizlogo1.visible=true;
+     k1=3.80; 
+    x=1
+   }
+   else
+   {
+ kizilyildizlogo1.position.x=800
+kizilyildizlogo1.position.y=330
+ kizilyildizlogo1.visible=true;
+   k2=3.80; 
+  x=2
+  }
+  }
+ 
+}
+  
+ void zalgirissec
+{
+  
+   if (zalgirislogo1.visible==false)
+   {
+  if (x==0)
+
+{
+ zalgirislogo1.position.x=480
+zalgirislogo1.position.y=330
+  zalgirislogo1.visible=true;
+     k1=3.72; 
+    x=1
+   }
+   else
+   {
+ zalgirislogo1.position.x=800
+zalgirislogo1.position.y=330
+zalgirislogo1.visible=true;
+   k2=3.72; 
+  x=2
+  }
+  }
+ 
+}
+  
+
+void realsec
+{
+  
+   if (reallogo1.visible==false)
+   {
+  if (x==0)
+
+{
+ reallogo1.position.x=480
+reallogo1.position.y=330
+  reallogo1.visible=true;
+     k1=3.99; 
+    x=1
+   }
+   else
+   {
+ reallogo1.position.x=800
+reallogo1.position.y=330
+reallogo1.visible=true;
+   k2=3.99; 
+  x=2
+  }
+  }
+ 
+}
+
+
+void barcasec
+{
+  
+   if (barcalogo1.visible==false)
+   {
+  if (x==0)
+
+{
+ barcalogo1.position.x=480
+barcalogo1.position.y=330
+  barcalogo1.visible=true;
+     k1=3.93; 
+    x=1
+   }
+   else
+   {
+ barcalogo1.position.x=800
+barcalogo1.position.y=330
+barcalogo1.visible=true;
+   k2=3.93; 
+  x=2
+  }
+  }
+ 
+}
+
+void cskasec
+{
+  
+   if (cskalogo1.visible==false)
+   {
+  if (x==0)
+
+{
+ cskalogo1.position.x=480
+cskalogo1.position.y=330
+  cskalogo1.visible=true;
+     k1=3.96; 
+    x=1
+   }
+   else
+   {
+ cskalogo1.position.x=800
+cskalogo1.position.y=330
+cskalogo1.visible=true;
+   k2=3.96; 
+  x=2
+  }
+  }
+ 
+}
+
+void panasec
+{
+  
+   if (panalogo1.visible==false)
+   {
+  if (x==0)
+
+{
+ panalogo1.position.x=480
+panalogo1.position.y=330
+  panalogo1.visible=true;
+     k1=3.92; 
+    x=1
+   }
+   else
+   {
+ panalogo1.position.x=800
+panalogo1.position.y=330
+panalogo1.visible=true;
+   k2=3.92; 
+  x=2
+  }
+  }
+ 
+}
+
+void olimpiakossec
+{
+  
+   if (olimpiakoslogo1.visible==false)
+   {
+  if (x==0)
+
+{
+ olimpiakoslogo1.position.x=480
+olimpiakoslogo1.position.y=330
+  olimpiakoslogo1.visible=true;
+     k1=3.90; 
+    x=1
+   }
+   else
+   {
+ olimpiakoslogo1.position.x=800
+olimpiakoslogo1.position.y=330
+olimpiakoslogo1.visible=true;
+   k2=3.90; 
+  x=2
+  }
+  }
+ 
+}
+
+void milanosec
+{
+  
+   if (milanologo1.visible==false)
+   {
+  if (x==0)
+
+{
+ milanologo1.position.x=480
+milanologo1.position.y=330
+  milanologo1.visible=true;
+     k1=3.75; 
+    x=1
+   }
+   else
+   {
+ milanologo1.position.x=800
+milanologo1.position.y=330
+milanologo1.visible=true;
+   k2=3.75; 
+  x=2
+  }
+  }
+ 
+}
+
+void monacosec
+{
+  
+   if (monacologo1.visible==false)
+   {
+  if (x==0)
+
+{
+ monacologo1.position.x=480
+monacologo1.position.y=330
+  monacologo1.visible=true;
+     k1=3.85; 
+    x=1
+   }
+   else
+   {
+ monacologo1.position.x=800
+monacologo1.position.y=330
+monacologo1.visible=true;
+   k2=3.85; 
+  x=2
+  }
+  }
+ 
+}
+
+void asvelsec
+{
+  
+   if (asvellogo1.visible==false)
+   {
+  if (x==0)
+
+{
+ asvellogo1.position.x=480
+asvellogo1.position.y=330
+  asvellogo1.visible=true;
+     k1=3.68; 
+    x=1
+   }
+   else
+   {
+ asvellogo1.position.x=800
+asvellogo1.position.y=330
+asvellogo1.visible=true;
+   k2=3.68; 
+  x=2
+  }
+  }
+ 
+}
+void bayernsec
+{
+  
+   if (bayernlogo1.visible==false)
+   {
+  if (x==0)
+
+{
+ bayernlogo1.position.x=480
+bayernlogo1.position.y=330
+  bayernlogo1.visible=true;
+     k1=3.70; 
+    x=1
+   }
+   else
+   {
+ bayernlogo1.position.x=800
+bayernlogo1.position.y=330
+bayernlogo1.visible=true;
+   k2=3.70; 
+  x=2
+  }
+  }
+ 
+}
+
+void partizansec
+{
+  
+   if (partizanlogo1.visible==false)
+   {
+  if (x==0)
+
+{
+ partizanlogo1.position.x=480
+partizanlogo1.position.y=330
+  partizanlogo1.visible=true;
+     k1=3.87; 
+    x=1
+   }
+   else
+   {
+ partizanlogo1.position.x=800
+partizanlogo1.position.y=330
+partizanlogo1.visible=true;
+   k2=3.87; 
+  x=2
+  }
+  }
+ 
+}
+
+void zenitsec
+{
+  
+   if (zenitlogo1.visible==false)
+   {
+  if (x==0)
+
+{
+ zenitlogo1.position.x=480
+zenitlogo1.position.y=330
+  zenitlogo1.visible=true;
+     k1=3.80; 
+    x=1
+   }
+   else
+   {
+ zenitlogo1.position.x=800
+zenitlogo1.position.y=330
+zenitlogo1.visible=true;
+   k2=3.80; 
+  x=2
+  }
+  }
+ 
+}
+
+
+
+
+ 
+
+{
+
+  myform=tclform.create(self)
+  MyForm.clSetWindowState(fwsMaximized);
+  myform.setformbgImage('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Logo_Turkish_Airlines_EUROLEAGUE_Horizontal.svg/2560px-Logo_Turkish_Airlines_EUROLEAGUE_Horizontal.svg.png')
+  cikis=MyForm.addnewbutton(MyForm,'cikis','ÇIKIŞ');
+  MyForm.addnewevent(cikis,tbeOnClick,'cikis')
+  cikis.align=alnone
+  cikis.position.x=1200
+  cikis.position.y=500
+  TclButton(myForm.clFindComponent('BtnGoBack')).visible = false;
+  TclButton(myForm.clFindComponent('BtnFormMenu')).visible = false;
+  MyForm.clCanClose = false;
+
+
+
+efeslogo1 = MyForm.AddNewImage(MyForm,'efeslogo1');
+efeslogo1.Width = 100;
+efeslogo1.Height = 100;
+MyForm.setImage(efeslogo1,'https://e7.pngegg.com/pngimages/843/95/png-clipart-anadolu-efes-s-k-logo-euroleague-basketball-emblem-basketball-angle-emblem-thumbnail.png');
+efeslogo1.align=alnone
+efeslogo1.position.x=480
+efeslogo1.position.y=330
+//MyForm.AddNewEvent(efeslogo1,tbeOnClick,'basla');
+efeslogo1.visible=false;
+
+
+
+
+efeslogo = MyForm.AddNewImage(MyForm,'efeslogo');
+efeslogo.Width = 100;
+efeslogo.Height = 100;
+MyForm.setImage(efeslogo,'https://e7.pngegg.com/pngimages/843/95/png-clipart-anadolu-efes-s-k-logo-euroleague-basketball-emblem-basketball-angle-emblem-thumbnail.png');
+efeslogo.align=alnone
+efeslogo.position.x=850
+efeslogo.position.y=150
+MyForm.AddNewEvent(efeslogo,tbeOnClick,'efessec');
+
+fblogo1 = MyForm.AddNewImage(MyForm,'fblogo1');
+fblogo1.Width = 100;
+fblogo1.Height = 100;
+MyForm.setImage(fblogo1,'https://e7.pngegg.com/pngimages/805/595/png-clipart-fenerbahce-men-s-basketball-team-fenerbahce-s-k-euroleague-uefa-champions-league-basketbol-super-ligi-football-thumbnail.png');
+fblogo1.align=alnone
+fblogo1.position.x=480
+fblogo1.position.y=330
+fblogo1.visible=false;
+
+fblogo = MyForm.AddNewImage(MyForm,'fblogo');
+fblogo.Width = 100;
+fblogo.Height = 100;
+MyForm.setImage(fblogo,'https://e7.pngegg.com/pngimages/805/595/png-clipart-fenerbahce-men-s-basketball-team-fenerbahce-s-k-euroleague-uefa-champions-league-basketbol-super-ligi-football-thumbnail.png');
+fblogo.align=alnone
+fblogo.position.x=700
+fblogo.position.y=150
+MyForm.AddNewEvent(fblogo,tbeOnClick,'fbsec');
+
+baskonyalogo1 = MyForm.AddNewImage(MyForm,'baskonyalogo1');
+baskonyalogo1.Width = 100;
+baskonyalogo1.Height = 100;
+MyForm.setImage(baskonyalogo1,'https://e7.pngegg.com/pngimages/648/572/png-clipart-saski-baskonia-b-euroleague-fernando-buesa-arena-real-madrid-baloncesto-basketball-label-logo-thumbnail.png');
+baskonyalogo1.align=alnone
+baskonyalogo1.position.x=480
+baskonyalogo1.position.y=330
+baskonyalogo1.visible=false
+
+baskonyalogo = MyForm.AddNewImage(MyForm,'baskonyalogo');
+baskonyalogo.Width = 100;
+baskonyalogo.Height = 100;
+MyForm.setImage(baskonyalogo,'https://e7.pngegg.com/pngimages/648/572/png-clipart-saski-baskonia-b-euroleague-fernando-buesa-arena-real-madrid-baloncesto-basketball-label-logo-thumbnail.png');
+baskonyalogo.align=alnone
+baskonyalogo.position.x=1000
+baskonyalogo.position.y=150
+MyForm.AddNewEvent(baskonyalogo,tbeOnClick,'baskonyasec');
+
+kizilyildizlogo1 = MyForm.AddNewImage(MyForm,'kizilyildizlogo1');
+kizilyildizlogo1.Width = 100;
+kizilyildizlogo1.Height = 100;
+MyForm.setImage(kizilyildizlogo1,' https://w7.pngwing.com/pngs/915/350/png-transparent-kk-crvena-zvezda-red-star-belgrade-aba-league-euroleague-kk-cibona-crvena-zvezda-logo-shield-football-player-thumbnail.png');
+kizilyildizlogo1.align=alnone
+kizilyildizlogo1.position.x=500
+kizilyildizlogo1.position.y=150
+kizilyildizlogo1.scale.y=1;
+kizilyildizlogo1.scale.x=1.3;
+kizilyildizlogo1.visible=false
+
+kizilyildizlogo = MyForm.AddNewImage(MyForm,'kizilyildizlogo');
+kizilyildizlogo.Width = 100;
+kizilyildizlogo.Height = 100;
+MyForm.setImage(kizilyildizlogo,' https://w7.pngwing.com/pngs/915/350/png-transparent-kk-crvena-zvezda-red-star-belgrade-aba-league-euroleague-kk-cibona-crvena-zvezda-logo-shield-football-player-thumbnail.png');
+kizilyildizlogo.align=alnone
+kizilyildizlogo.position.x=500
+kizilyildizlogo.position.y=150
+kizilyildizlogo.scale.y=1;
+kizilyildizlogo.scale.x=1.3;
+MyForm.AddNewEvent(kizilyildizlogo,tbeOnClick,'kizilyildizsec');
+
+
+zalgirislogo1 = MyForm.AddNewImage(MyForm,'zalgirislogo1');
+zalgirislogo1.Width = 100;
+zalgirislogo1.Height = 100;
+MyForm.setImage(zalgirislogo1,'https://w7.pngwing.com/pngs/348/905/png-transparent-bc-%C5%BDalgiris-kaunas-fk-kauno-%C5%BDalgiris-maccabi-tel-aviv-b-c-lietuvos-krep%C5%A1inio-lyga-basketball-text-sport-team-thumbnail.png');
+zalgirislogo1.align=alnone
+zalgirislogo1.position.x=350
+zalgirislogo1.position.y=150
+zalgirislogo1.scale.y=1;
+zalgirislogo1.scale.x=1.1;
+zalgirislogo1.visible=false
+
+
+zalgirislogo = MyForm.AddNewImage(MyForm,'zalgirislogo');
+zalgirislogo.Width = 100;
+zalgirislogo.Height = 100;
+MyForm.setImage(zalgirislogo,'https://w7.pngwing.com/pngs/348/905/png-transparent-bc-%C5%BDalgiris-kaunas-fk-kauno-%C5%BDalgiris-maccabi-tel-aviv-b-c-lietuvos-krep%C5%A1inio-lyga-basketball-text-sport-team-thumbnail.png');
+zalgirislogo.align=alnone
+zalgirislogo.position.x=350
+zalgirislogo.position.y=150
+zalgirislogo.scale.y=1;
+zalgirislogo.scale.x=1.1;
+MyForm.AddNewEvent(zalgirislogo,tbeOnClick,'zalgirissec');
+
+
+
+reallogo1 = MyForm.AddNewImage(MyForm,'reallogo1');
+reallogo1.Width = 100;
+reallogo1.Height = 100;
+MyForm.setImage(reallogo1,'https://w7.pngwing.com/pngs/182/901/png-transparent-real-madrid-c-f-santiago-bernabeu-stadium-real-madrid-baloncesto-desktop-football-football-emblem-sport-logo.png');
+reallogo1.align=alnone
+reallogo1.position.x=350
+reallogo1.position.y=150
+reallogo1.scale.y=1.6;
+reallogo1.scale.x=1.1;
+reallogo1.visible=false
+
+reallogo = MyForm.AddNewImage(MyForm,'reallogo');
+reallogo.Width = 100;
+reallogo.Height = 100;
+MyForm.setImage(reallogo,'https://w7.pngwing.com/pngs/182/901/png-transparent-real-madrid-c-f-santiago-bernabeu-stadium-real-madrid-baloncesto-desktop-football-football-emblem-sport-logo.png');
+reallogo.align=alnone
+reallogo.position.x=200
+reallogo.position.y=120
+reallogo.scale.y=1.6;
+reallogo.scale.x=1.1;
+
+
+
+
+MyForm.AddNewEvent(reallogo,tbeOnClick,'realsec');
+ 
+
+
+
+
+
+
+barcalogo1 = MyForm.AddNewImage(MyForm,'barcalogo1');
+barcalogo1.Width = 100;
+barcalogo1.Height = 100;
+MyForm.setImage(barcalogo1,'https://w1.pngwing.com/pngs/105/197/png-transparent-barcelona-logo-fc-barcelona-football-la-liga-fifa-club-world-cup-sports-joan-gamper-yellow.png');
+barcalogo1.align=alnone
+barcalogo1.position.x=350
+barcalogo1.position.y=150
+barcalogo1.scale.y=1.6;
+barcalogo1.scale.x=1.1;
+barcalogo1.visible=false
+
+
+
+
+
+barcalogo = MyForm.AddNewImage(MyForm,'barcalogo');
+barcalogo.Width = 100;
+barcalogo.Height = 100;
+MyForm.setImage(barcalogo,'https://w1.pngwing.com/pngs/105/197/png-transparent-barcelona-logo-fc-barcelona-football-la-liga-fifa-club-world-cup-sports-joan-gamper-yellow.png');
+barcalogo.align=alnone
+barcalogo.position.x=50
+barcalogo.position.y=120
+barcalogo.scale.y=1.6;
+barcalogo.scale.x=1.1;
+MyForm.AddNewEvent(barcalogo,tbeOnClick,'barcasec');
+
+cskalogo1 = MyForm.AddNewImage(MyForm,'cskalogo1');
+cskalogo1.Width = 100;
+cskalogo1.Height = 100;
+MyForm.setImage(cskalogo1,'https://banner2.cleanpng.com/20180814/hfk/kisspng-pbc-cska-moscow-euroleague-final-four-maccabi-tel-pbc-cska-moscow-thesportsdb-com-5b72a4d5aad361.6305052515342399576997.jpg');
+cskalogo1.align=alnone
+cskalogo1.position.x=350
+cskalogo1.position.y=150
+cskalogo1.scale.y=1.7;
+cskalogo1.scale.x=1.1;
+cskalogo1.visible=false
+
+
+ 
+
+cskalogo = MyForm.AddNewImage(MyForm,'cskalogo');
+cskalogo.Width = 100;
+cskalogo.Height = 100;
+cskalogo.scale.y=1.7;
+cskalogo.scale.x=1.1;
+MyForm.setImage(cskalogo,'https://banner2.cleanpng.com/20180814/hfk/kisspng-pbc-cska-moscow-euroleague-final-four-maccabi-tel-pbc-cska-moscow-thesportsdb-com-5b72a4d5aad361.6305052515342399576997.jpg');
+cskalogo.align=alnone
+cskalogo.position.x=1150
+cskalogo.position.y=115
+MyForm.AddNewEvent(cskalogo,tbeOnClick,'cskasec');
+
+
+
+panalogo1 = MyForm.AddNewImage(MyForm,'panalogo1');
+panalogo1.Width = 100;
+panalogo1.Height = 100;
+MyForm.setImage(panalogo1,'https://upload.wikimedia.org/wikipedia/tr/archive/9/9f/20210618212704%21Panathinaikos_B.C._logo.png');
+panalogo1.align=alnone
+panalogo1.position.x=350
+panalogo1.position.y=150
+panalogo1.scale.y=1.1;
+panalogo1.scale.x=1.1;
+panalogo1.visible=false
+
+
+ 
+
+panalogo = MyForm.AddNewImage(MyForm,'panalogo');
+panalogo.Width = 100;
+panalogo.Height = 100;
+MyForm.setImage(panalogo,'https://upload.wikimedia.org/wikipedia/tr/archive/9/9f/20210618212704%21Panathinaikos_B.C._logo.png');
+panalogo.align=alnone
+panalogo.position.x=1150
+panalogo.position.y=10
+panalogo.scale.y=1.1;
+panalogo.scale.x=1.1;
+MyForm.AddNewEvent(panalogo,tbeOnClick,'panasec');
+
+olimpiakoslogo1 = MyForm.AddNewImage(MyForm,'olimpiakoslogo1');
+olimpiakoslogo1.Width = 100;
+olimpiakoslogo1.Height = 100;
+MyForm.setImage(olimpiakoslogo1,'https://iconape.com/wp-content/png_logo_vector/olympiacos-fc-logo.png');
+olimpiakoslogo1.align=alnone
+olimpiakoslogo1.position.x=350
+olimpiakoslogo1.position.y=150
+olimpiakoslogo1.scale.y=1.1;
+olimpiakoslogo1.scale.x=1.1;
+olimpiakoslogo1.visible=false
+
+
+ 
+
+
+
+olimpiakoslogo = MyForm.AddNewImage(MyForm,'olimpiakoslogo');
+olimpiakoslogo.Width = 100;
+olimpiakoslogo.Height = 100;
+MyForm.setImage(olimpiakoslogo,'https://iconape.com/wp-content/png_logo_vector/olympiacos-fc-logo.png');
+olimpiakoslogo.align=alnone
+olimpiakoslogo.position.x=995
+olimpiakoslogo.position.y=10
+olimpiakoslogo.scale.y=1.1;
+olimpiakoslogo.scale.x=1.1;
+MyForm.AddNewEvent(olimpiakoslogo,tbeOnClick,'olimpiakossec');
+
+milanologo1 = MyForm.AddNewImage(MyForm,'milanologo1');
+milanologo1.Width = 100;
+milanologo1.Height = 100;
+MyForm.setImage(milanologo1,'https://w7.pngwing.com/pngs/508/264/png-transparent-olimpia-milano-armani-adidas-brand-logo-adidas-text-leather-fashion-thumbnail.png');
+milanologo1.align=alnone
+milanologo1.position.x=350
+milanologo1.position.y=150
+milanologo1.scale.y=0.7;
+milanologo1.scale.x=1;
+milanologo1.visible=false
+
+
+milanologo = MyForm.AddNewImage(MyForm,'milanologo');
+milanologo.Width = 100;
+milanologo.Height = 100;
+MyForm.setImage(milanologo,'https://w7.pngwing.com/pngs/508/264/png-transparent-olimpia-milano-armani-adidas-brand-logo-adidas-text-leather-fashion-thumbnail.png');
+milanologo.align=alnone
+milanologo.position.x=850
+milanologo.position.y=35
+milanologo.scale.y=0.7;
+milanologo.scale.x=1;
+MyForm.AddNewEvent(milanologo,tbeOnClick,'milanosec');
+ 
+
+monacologo1 = MyForm.AddNewImage(MyForm,'monacologo1');
+monacologo1.Width = 100;
+monacologo1.Height = 100;
+MyForm.setImage(monacologo1,'https://upload.wikimedia.org/wikipedia/tr/archive/1/15/20210618204414%21As_monaco_basket_logo.png');
+monacologo1.align=alnone
+monacologo1.position.x=350
+monacologo1.position.y=150
+monacologo1.scale.y=1.3;
+monacologo1.scale.x=1.4;
+monacologo1.visible=false
+
+
+
+
+
+monacologo = MyForm.AddNewImage(MyForm,'monacologo');
+monacologo.Width = 100;
+monacologo.Height = 100;
+MyForm.setImage(monacologo,'https://upload.wikimedia.org/wikipedia/tr/archive/1/15/20210618204414%21As_monaco_basket_logo.png');
+monacologo.align=alnone
+monacologo.position.x=675
+monacologo.scale.y=1.3;
+monacologo.scale.x=1.4;
+monacologo.position.y=0
+MyForm.AddNewEvent(monacologo,tbeOnClick,'monacosec');
+ 
+
+asvellogo1 = MyForm.AddNewImage(MyForm,'asvellogo1');
+asvellogo1.Width = 100;
+asvellogo1.Height = 100;
+MyForm.setImage(asvellogo1,'https://upload.wikimedia.org/wikipedia/tr/thumb/1/12/ASVEL_Basket_logo.jpg/220px-ASVEL_Basket_logo.jpg');
+asvellogo1.align=alnone;
+asvellogo1.position.x=350
+asvellogo1.position.y=150
+asvellogo1.scale.y=0.95;
+asvellogo1.scale.x=1.2;
+asvellogo1.visible=false;
+
+
+asvellogo = MyForm.AddNewImage(MyForm,'asvellogo');
+asvellogo.Width = 100;
+asvellogo.Height = 80;
+MyForm.setImage(asvellogo,'https://upload.wikimedia.org/wikipedia/tr/thumb/1/12/ASVEL_Basket_logo.jpg/220px-ASVEL_Basket_logo.jpg');
+asvellogo.align=alnone;
+asvellogo.position.x=500
+asvellogo.position.y=35
+asvellogo.scale.y=0.95;
+asvellogo.scale.x=1.2;
+MyForm.AddNewEvent(asvellogo,tbeOnClick,'asvelsec');
+ 
+
+
+bayernlogo1 = MyForm.AddNewImage(MyForm,'bayernlogo1');
+bayernlogo1.Width = 100;
+bayernlogo1.Height = 100;
+MyForm.setImage(bayernlogo1,'https://img.fcbayern.com/image/upload/t_cms-1x1-seo/v1659946185/cms/public/images/fcb-basketball/news/2022-23/08/FCBB_Logo_2022_Web_PM.jpg');
+bayernlogo1.align=alnone
+bayernlogo1.position.x=350
+bayernlogo1.position.y=150
+bayernlogo1.scale.y=0.95;
+bayernlogo1.scale.x=1.3;
+bayernlogo1.visible=false
+
+ 
+bayernlogo = MyForm.AddNewImage(MyForm,'bayernlogo');
+bayernlogo.Width = 80;
+bayernlogo.Height = 100;
+MyForm.setImage(bayernlogo,'https://img.fcbayern.com/image/upload/t_cms-1x1-seo/v1659946185/cms/public/images/fcb-basketball/news/2022-23/08/FCBB_Logo_2022_Web_PM.jpg');
+bayernlogo.align=alnone
+bayernlogo.position.x=350
+bayernlogo.position.y=25
+bayernlogo.scale.y=0.95;
+bayernlogo.scale.x=1.3;
+MyForm.AddNewEvent(bayernlogo,tbeOnClick,'bayernsec');
+
+
+partizanlogo1 = MyForm.AddNewImage(MyForm,'partizanlogo1');
+partizanlogo1.Width = 100;
+partizanlogo1.Height = 100;
+MyForm.setImage(partizanlogo1,'https://w7.pngwing.com/pngs/146/589/png-transparent-partizan-stadium-fk-partizan-red-star-belgrade-eternal-derby-serbian-superliga-football-emblem-sport-team.png');
+partizanlogo1.align=alnone
+partizanlogo1.position.x=350
+partizanlogo1.position.y=150
+partizanlogo1.scale.y=1.3;
+partizanlogo1.scale.x=1.1;
+partizanlogo1.visible=false
+
+
+
+
+
+
+
+partizanlogo = MyForm.AddNewImage(MyForm,'partizanlogo');
+partizanlogo.Width = 100;
+partizanlogo.Height = 100;
+MyForm.setImage(partizanlogo,'https://w7.pngwing.com/pngs/146/589/png-transparent-partizan-stadium-fk-partizan-red-star-belgrade-eternal-derby-serbian-superliga-football-emblem-sport-team.png');
+partizanlogo.align=alnone
+partizanlogo.position.x=200
+partizanlogo.position.y=8
+partizanlogo.scale.y=1.3;
+partizanlogo.scale.x=1.1;
+MyForm.AddNewEvent(partizanlogo,tbeOnClick,'partizansec');
+ 
+
+zenitlogo1 = MyForm.AddNewImage(MyForm,'zenitlogo1');
+zenitlogo1.Width = 100;
+zenitlogo1.Height = 100;
+MyForm.setImage(zenitlogo1,'https://w1.pngwing.com/pngs/507/918/png-transparent-basketball-logo-fc-zenit-saint-petersburg-uefa-europa-league-rb-leipzig-football-fc-copenhagen-sk-slavia-prague-eurocup-basketball.png');
+zenitlogo1.align=alnone
+zenitlogo1.position.x=350
+zenitlogo1.position.y=150
+zenitlogo1.scale.y=1.5;
+zenitlogo1.scale.x=1.1;
+zenitlogo1.visible=false
+
+
+
+
+zenitlogo = MyForm.AddNewImage(MyForm,'zenitlogo');
+zenitlogo.Width = 100;
+zenitlogo.Height = 100;
+MyForm.setImage(zenitlogo,'https://w1.pngwing.com/pngs/507/918/png-transparent-basketball-logo-fc-zenit-saint-petersburg-uefa-europa-league-rb-leipzig-football-fc-copenhagen-sk-slavia-prague-eurocup-basketball.png');
+zenitlogo.align=alnone
+zenitlogo.position.x=50
+zenitlogo.position.y=0
+zenitlogo.scale.y=1.5;
+zenitlogo.scale.x=1.1;
+
+MyForm.AddNewEvent(zenitlogo,tbeOnClick,'zenitsec');
+ 
+
+
+
+
+
+
+ //labelefes=myform.adnewlabel()
+ takim=myform.addnewbutton(myform,'takim','TAKIMLAR')
+ myform.addnewevent(takim,tbeonclick,'takimsec')
+ takim.visible=false;
+ 
+labelefes = MyForm.AddNewLabel(MyForm,'labelefes','');
+labelefes.StyledSettings = ssFamily;
+labelefes.TextSettings.Font.Size = 23;
+labelefes.TextSettings.FontColor = clAlphaColor.clHexToColor('#ffffff');
+labelefes.Caption = inttostr(a1);
+labelefes.align=alnone
+labelefes.position.x=520
+labelefes.position.y=450
+labelefes.height=50;
+labelefes.visible=false
+
+labelefes11 = MyForm.AddNewLabel(MyForm,'labelefes11','');
+labelefes11.StyledSettings = ssFamily;
+labelefes11.TextSettings.Font.Size = 23;
+labelefes11.TextSettings.FontColor = clAlphaColor.clHexToColor('#ffffff');
+labelefes11.Caption = inttostr(a11);
+labelefes11.align=alnone
+labelefes11.position.x=420
+labelefes11.position.y=450
+labelefes11.height=50;
+labelefes11.visible=false
+
+labelfb = MyForm.AddNewLabel(MyForm,'labelfb','');
+labelfb.StyledSettings = ssFamily;
+labelfb.TextSettings.Font.Size = 23;
+labelfb.TextSettings.FontColor = clAlphaColor.clHexToColor('#ffffff');
+labelfb.Caption = inttostr(b1);
+labelfb.align=alnone
+labelfb.position.x=840
+labelfb.position.y=450
+labelfb.height=50;
+labelfb.visible=false
+
+labelfb11 = MyForm.AddNewLabel(MyForm,'labelfb11','');
+labelfb11.StyledSettings = ssFamily;
+labelfb11.TextSettings.Font.Size = 23;
+labelfb11.TextSettings.FontColor = clAlphaColor.clHexToColor('#ffffff');
+labelfb11.Caption = inttostr(b11);
+labelfb11.align=alnone
+labelfb11.position.x=940
+labelfb11.position.y=450
+labelfb11.height=50;
+labelfb11.visible=false
+
+  a1=0
+  b1=0
+  a11=0
+  b11=0
+  x=0;
+
+  sifirla=myform.addnewbutton(myform,'sifirla','SIFIRLA')
+  myform.addnewevent(sifirla,tbeonclick,'sif');
+  sifirla.align=alnone;
+  sifirla.visible=false
+  sifirla.position.x=50
+  sifirla.position.y=300
+  sifirla.scale.x=2;
+  sifirla.scale.y=2;
+calis=myform.addnewbutton(myform,'calis','BAŞLA')
+myform.addnewevent(calis,tbeonclick,'basla')
+calis.align=albottom;
+calis.height=50;
+
+  myform.run
+}
