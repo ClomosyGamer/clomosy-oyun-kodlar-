@@ -1,0 +1,81 @@
+ var
+ myform:Tclform;
+ buton,tekrar:tclbutton;
+a,b,c,d,x:Int;
+kedi,fare,kazandin:Tclimage;
+void patlat
+
+for x=1 to 10
+{
+a=Trunc(random()*12) *100
+b=Trunc(random()*6)*100
+c=Trunc(random()*12) *100
+d=Trunc(random()*6) *100
+
+
+kedi.position.x=a;
+kedi.position.y=b;
+fare.position.x=c;
+fare.position.y=d;
+if ((a==c-100) && (b==d-100))
+{
+  showmessage('TEBRİKLER YAKALADIN')
+  kazandin.visible=true;
+  buton.visible=false
+  tekrar.visible=true
+  exit
+}
+
+}
+void tekraroyna
+{
+tekrar.visible=false
+kazandin.visible=false;
+buton.visible=true
+fare.position.x=200;
+fare.position.y=400;
+kedi.position.x=1000;
+kedi.position.y=500;
+}
+{
+  myform=Tclform.create(self);
+  myForm.clSetCaption('KEDİ FARE OYUNU');
+
+myform.setformbgimage('https://cdn.pixabay.com/photo/2022/05/01/11/01/kitchen-7167309_960_720.png')
+
+
+
+kedi=myform.addnewimage(myform,'kedi')
+ kedi.Width = 200;
+kedi.Height = 200;
+kedi.align=alnone
+kedi.position.x=1200;
+kedi.position.y=500;
+  myform.setimage(kedi,'https://cdn.pixabay.com/photo/2017/09/01/00/15/png-2702691_1280.png')
+
+fare=myform.addnewimage(myform,'fare')
+ fare.Width = 80;
+fare.Height = 80;
+fare.align=alnone
+fare.position.x=100;
+fare.position.y=300;
+  myform.setimage(fare,'https://cdn.pixabay.com/photo/2017/10/04/02/14/mouse-2814846_1280.png')
+  
+kazandin=myform.addnewimage(myform,'kazandin')
+ kazandin.Width = 500;
+kazandin.Height = 500;
+kazandin.align=alnone
+  myform.setimage(kazandin,'https://cdn.pixabay.com/photo/2017/10/06/07/53/cook-2822197_640.png')
+  kazandin.visible=false;
+
+  buton=myform.addnewbutton(myform,'buton','Fareyi Yakala')
+  myform.addnewevent(buton,tbeonclick,'patlat');
+  buton.align=albottom
+
+  tekrar=myform.addnewbutton(myform,'tekrar','Tekrar Oyna')
+  myform.addnewevent(tekrar,tbeonclick,'tekraroyna');
+  tekrar.align=altop
+tekrar.visible=false
+
+  myform.run;
+  }
