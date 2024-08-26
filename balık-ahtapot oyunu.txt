@@ -1,0 +1,372 @@
+var
+MyForm:TclForm;
+Sag,Sol,Yukari,Asagi,Basla,sag1,sol1,yukari1,asagi1,tekrar:TclButton;
+isima,isimb;TclLabel;
+testImg1,testImg2,testImg3,yem,yem1,yem2:TclImage;
+
+
+void eylem;
+{
+ testImg1.position.x=testImg1.position.x+10;
+ if ((testImg1.position.x==190) && (testImg1.position.y==190))
+  {
+    yem.visible=false;
+  }
+    if ((testImg1.position.x==890) && (testImg1.position.y==490))
+  {
+    yem1.visible=false;
+  }
+  if ((testImg1.position.x==990) && (testImg1.position.y==90))
+  {
+    yem2.visible=false;
+  }
+}
+
+void eylem1;
+{
+  testImg1.position.x=testImg1.position.x-10;
+ if ((testImg1.position.x==190) && (testImg1.position.y==190))
+  {
+    yem.visible=false;
+  }
+    if ((testImg1.position.x==890) && (testImg1.position.y==490))
+  {
+    yem1.visible=false;
+  }
+  if ((testImg1.position.x==990) && (testImg1.position.y==90))
+  {
+    yem2.visible=false;
+  }
+}
+
+void eylem2;
+{
+  testImg1.position.y=testImg1.position.y-10;
+  if ((testImg1.position.x==190) && (testImg1.position.y==190))
+  {
+    yem.visible=false;
+  }
+    if ((testImg1.position.x==890) && (testImg1.position.y==490))
+  {
+    yem1.visible=false;
+  }
+  if ((testImg1.position.x==990) && (testImg1.position.y==90))
+  {
+    yem2.visible=false;
+  }
+}
+void eylem3;
+{
+  testImg1.position.y=testImg1.position.y+10;
+
+ if ((testImg1.position.x==190) && (testImg1.position.y==190))
+  {
+    yem.visible=false;
+  }
+    if ((testImg1.position.x==890) && (testImg1.position.y==490))
+  {
+    yem1.visible=false;
+  }
+ if ((testImg1.position.x==990) && (testImg1.position.y==90))
+  {
+    yem2.visible=false;
+  }
+}
+
+void eylem4;
+{
+  testImg2.position.x=testImg2.position.x+10;
+ if ((testImg2.position.x==190) && (testImg2.position.y==180))
+  {
+    yem.visible=false;
+  }
+    if ((testImg2.position.x==890) && (testImg2.position.y==480))
+  {
+    yem1.visible=false;
+  }
+  if ((testImg2.position.x==990) && (testImg2.position.y==80))
+  {
+    yem2.visible=false;
+  }
+  
+}
+
+void eylem5;
+{
+  testImg2.position.x=testImg2.position.x-10;
+ 
+   if ((testImg2.position.x==190) && (testImg2.position.y==180))
+  {
+    yem.visible=false;
+  }
+    if ((testImg2.position.x==890) && (testImg2.position.y==480))
+  {
+    yem1.visible=false;
+  }
+  if ((testImg2.position.x==990) && (testImg2.position.y==80))
+  {
+    yem2.visible=false;
+  }
+  
+}
+
+void eylem6;
+{
+  testImg2.position.y=testImg2.position.y-10;
+   if ((testImg2.position.x==190) && (testImg2.position.y==180))
+  {
+    yem.visible=false;
+  }
+    if ((testImg2.position.x==890) && (testImg2.position.y==480))
+  {
+    yem1.visible=false;
+  }
+  if ((testImg2.position.x==990) && (testImg2.position.y==80))
+  {
+    yem2.visible=false;
+  }
+}
+
+void eylem7;
+{
+  testImg2.position.y=testImg2.position.y+10;
+  if ((testImg2.position.x==190) && (testImg2.position.y==180))
+  {
+    yem.visible=false;
+  }
+   if ((testImg2.position.x==890) && (testImg2.position.y==480))
+  {
+    yem1.visible=false;
+  }
+  if ((testImg2.position.x==990) && (testImg2.position.y==80))
+  {
+    yem2.visible=false;
+  }
+}
+
+void KeyDown
+
+{
+ if (MyForm.clSenderKeyChar==100)//SAG
+{
+eylem;
+}
+
+ if (MyForm.clSenderKeyChar==68)//SAG
+{
+eylem;
+}
+if (MyForm.clSenderKeyChar==97)//SOL
+{
+  eylem1;
+}
+if (MyForm.clSenderKeyChar==65)//SOL
+{
+  eylem1;
+}
+
+if (MyForm.clSenderKeyChar==115)//ASAGI
+{
+eylem3;
+}
+
+if (MyForm.clSenderKeyChar==83)//ASAGI
+{
+eylem3;
+}
+
+if (MyForm.clSenderKeyChar==119)//YUKARI
+{
+eylem2;
+}
+if (MyForm.clSenderKeyChar==87)//YUKARI
+{
+eylem2;
+}
+if (MyForm.clSenderKeyChar==77)//SAG
+{
+eylem4;
+}
+
+ if (MyForm.clSenderKeyChar==109)//SAG
+{
+eylem4;
+}
+if (MyForm.clSenderKeyChar==66)//SOL
+{
+  eylem5;
+}
+if (MyForm.clSenderKeyChar==98)//SOL
+{
+  eylem5;
+}
+
+if (MyForm.clSenderKeyChar==78)//ASAGI
+{
+eylem7;
+}
+
+if (MyForm.clSenderKeyChar==110)//ASAGI
+{
+eylem7;
+}
+
+if (MyForm.clSenderKeyChar==72)//YUKARI
+{
+eylem6;
+}
+if (MyForm.clSenderKeyChar==104)//YUKARI
+{
+eylem6;
+}
+
+}
+void yenile
+{
+  yem.visible=true;
+  yem1.visible=true;
+}
+
+{
+  MyForm=TclForm.create(self);
+  MyForm.clSetWindowState(fwsMaximized);
+  MyForm.addnewevent(MyForm,tbeonkeydown,'KeyDown');
+  
+   yem=MyForm.AddNewImage(MyForm,'yem');
+   yem.Width=100;
+   yem.Height=100;
+   MyForm.setImage(yem,'https://www.sagun.com/wp-content/uploads/2019/03/balik-yemi.png');
+   yem.Align=Alnone;
+   yem.position.x=200;
+   yem.position.y=200;
+
+  yem1=MyForm.AddNewImage(MyForm,'yem1');
+   yem1.Width=100;
+   yem1.Height=100;
+   MyForm.setImage(yem1,'https://www.sagun.com/wp-content/uploads/2019/03/balik-yemi.png');
+   yem1.Align=Alnone;
+  yem1.position.x=900;
+  yem1.position.y=500;
+
+   yem2=MyForm.AddNewImage(MyForm,'yem2');
+   yem2.Width=100;
+   yem2.Height=100;
+   MyForm.setImage(yem2,'https://www.sagun.com/wp-content/uploads/2019/03/balik-yemi.png');
+   yem2.Align=Alnone;
+   yem2.position.x=1000;
+   yem2.position.y=100;
+
+
+
+  testImg1=MyForm.AddNewImage(MyForm,'testImg1');
+  testImg1.Width = 110;
+  testImg1.Height = 110;
+  MyForm.setImage(testImg1,'https://png.pngtree.com/png-vector/20240212/ourmid/pngtree-goldfish-on-transparent-background-png-image_11739862.png');
+  testImg1.Align=Alnone;
+  testImg1.position.x=100;
+  testImg1.position.y=500;
+
+
+   testImg2=MyForm.AddNewImage(MyForm,'testImg2');
+   testImg2.Width = 130;
+   testImg2.Height =130;
+   MyForm.setImage(testImg2,'https://static.vecteezy.com/system/resources/previews/024/705/070/original/octopus-with-ai-generated-free-png.png');
+   testImg2.Align=AlNone;
+
+  testImg2.position.x=300;
+  testImg2.position.y=100;
+   
+
+   MyForm.setFormBGImage('https://i.ytimg.com/vi/YS6d_a5UmNU/hq720.jpg');
+
+   isima=MyForm.AddNewLabel(MyForm,'isima','- BALIK -')
+   isima.Align=alNone;
+   isima.StyledSettings=ssFamily;
+   isima.TextSettings.Font.Size=20;
+   isima.position.x=250;
+   isima.position.y=10;
+
+   isimb=MyForm.AddNewLabel(MyForm,'isimb','- AHTAPOT -')
+   isimb.Align=alNone;
+   isimb.StyledSettings=ssFamily;
+   isimb.TextSettings.Font.Size=20;
+   isimb.position.x=1040;
+   isimb.position.y=10;
+
+   tekrar=MyForm.AddNewButton(MyForm,'tekrar','tekrar');
+  tekrar.StyledSettings=ssFamily;
+  tekrar.TextSettings.Font.Size=15;
+  tekrar.Align=AlNone;
+  tekrar.position.x=650;
+  tekrar.position.y=50;
+  MyForm.AddNewEvent(tekrar,tbeOnClick,'yenile');
+
+
+  sag=MyForm.AddNewButton(MyForm,'sag','sag');
+  sag.StyledSettings=ssFamily;
+  sag.TextSettings.Font.Size=15;
+  sag.Align=AlNone;
+  sag.position.x=100;
+  sag.position.y=50;
+  MyForm.AddNewEvent(sag,tbeOnClick,'eylem');
+
+  sol=MyForm.AddNewButton(MyForm,'sol','sol');
+  sol.StyledSettings=ssFamily;
+  sol.TextSettings.Font.Size=15;
+  sol.Align=alnone;
+  sol.position.x=200;
+  sol.position.y=50;
+  MyForm.AddNewEvent(sol,tbeOnClick,'eylem1');
+
+  yukari=MyForm.AddNewButton(MyForm,'yukari', 'yukari');
+  yukari.StyledSettings=ssFamily;
+  yukari.TextSettings.Font.Size=15;
+  yukari.Align=alnone;
+  yukari.position.x=400;
+  yukari.position.y=50;
+  MyForm.AddNewEvent(yukari,tbeOnClick,'eylem2');
+
+asagi=MyForm.AddNewButton(MyForm,'asagi','asagi');
+asagi.StyledSettings=ssFamily;
+asagi.TextSettings.Font.Size=15;
+asagi.Align=alnone;
+asagi.position.x=300;
+asagi.position.y=50;
+MyForm.AddNewEvent(asagi,tbeOnClick,'eylem3');
+MyForm.AddNewEvent(MyForm,tbeOnClick,'KeyDown');
+
+sag1=MyForm.AddNewButton(MyForm,'sag1','sag');
+  sag1.StyledSettings=ssFamily;
+  sag1.TextSettings.Font.Size=15;
+  sag1.Align=AlNone;
+  sag1.position.x=900;
+  sag1.position.y=50;
+  MyForm.AddNewEvent(sag1,tbeOnClick,'eylem4');
+
+  sol1=MyForm.AddNewButton(MyForm,'sol1','sol');
+  sol1.StyledSettings=ssFamily;
+  sol1.TextSettings.Font.Size=15;
+  sol1.Align=alnone;
+  sol1.position.x=1000;
+  sol1.position.y=50;
+  MyForm.AddNewEvent(sol1,tbeOnClick,'eylem5');
+
+  yukari1=MyForm.AddNewButton(MyForm,'yukari1', 'yukari');
+  yukari1.StyledSettings=ssFamily;
+  yukari1.TextSettings.Font.Size=15;
+  yukari1.Align=alnone;
+  yukari1.position.x=1200;
+  yukari1.position.y=50;
+  MyForm.AddNewEvent(yukari1,tbeOnClick,'eylem6');
+
+ asagi1=MyForm.AddNewButton(MyForm,'asagi1','asagi');
+ asagi1.StyledSettings=ssFamily;
+ asagi1.TextSettings.Font.Size=15;
+ asagi1.Align=alnone;
+ asagi1.position.x=1100;
+ asagi1.position.y=50;
+ MyForm.AddNewEvent(asagi1,tbeOnClick,'eylem7');
+ MyForm.AddNewEvent(MyForm,tbeOnClick,'KeyDown');
+
+MyForm.run;
+}
