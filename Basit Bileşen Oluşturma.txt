@@ -1,0 +1,638 @@
+var
+a,b,c,d,e:Integer;
+tLabel:TclLabel;
+tButon,temizle,DuzenleBtn,SolBtn,SagBtn,YukariBtn,AsagiBtn,BuyutBtn,KucultBtn:TclButton;
+tEdit,konumxEdit,konumyEdit,Hedit,Wedit:TclEdit;
+timg:Tclimage;
+myForm:TclForm;
+MouseLbl:TclLabel;
+GestureImg:TClImage;
+BilesenCombo,ACombo,ProsedurCombo:TclComboBox;
+
+void onFormMouseMove;
+{
+
+MouseLbl.Text = IntToStr(MyForm.clFormMousePosX) + ','+ 
+IntToStr(MyForm.clFormMousePosY);
+MouseLbl.Text = IntToStr(MyForm.clSenderMousePosX) + ','+ 
+IntToStr(MyForm.clSenderMousePosY);
+}
+void onFormMouseDown;
+{
+
+MouseLbl.Text = IntToStr(MyForm.clFormMousePosX) + ','+ 
+IntToStr(MyForm.clFormMousePosY);
+MouseLbl.Text = IntToStr(MyForm.clSenderMousePosX) + ','+ 
+IntToStr(MyForm.clSenderMousePosY);
+}
+
+void onFormMouseUp;
+{ 
+MouseLbl.Text = IntToStr(MyForm.clFormMousePosX) + ','+ 
+IntToStr(MyForm.clFormMousePosY);
+MouseLbl.Text = IntToStr(MyForm.clSenderMousePosX) + ','+ 
+IntToStr(MyForm.clSenderMousePosY);
+} 
+
+ void BilesenSEC
+ {
+  if (BilesenCombo.ItemIndex==1) 
+{
+tLabel.visible=True;
+a=1;
+
+ }
+if (BilesenCombo.ItemIndex==2) 
+{
+tButon.visible=True;
+a=2;
+ }
+if (BilesenCombo.ItemIndex==3) 
+{
+tEdit.visible=True;
+a=3;
+ }
+if (BilesenCombo.ItemIndex==4) 
+{
+timg.visible=True;
+a=4;
+ }
+}
+
+void EkranTemizle
+{
+
+ tLabel.visible=False; 
+ tButon.visible=False;
+ tEdit.visible=False;
+ timg.visible=False;
+}
+
+void alignsec
+
+{
+if  (ACombo.ItemIndex==1)  //AlNone
+{
+   if ((konumxEdit.text=='')||(konumyEdit.text==''))
+  {
+    ShowMessage('LÜTFEN KONUM GİRİNİZ');
+    }
+    else
+    {
+  case a of
+{
+ 
+1:
+{
+  
+tLabel.align=ALNONE;
+ tLabel.position.X=StrToInt(konumxEdit.text);
+tLabel.position.Y=StrToInt(konumyEdit.text);
+}
+2:
+{
+tButon.align=ALNONE;
+tButon.position.X=StrToInt(konumxEdit.text);
+tButon.position.Y=StrToInt(konumyEdit.text);
+}
+3:
+{
+tEdit.align=ALNONE;
+tEdit.position.X=StrToInt(konumxEdit.text);
+tEdit.position.Y=StrToInt(konumyEdit.text);
+}
+4:
+{
+timg.align=ALNONE;
+timg.position.X=StrToInt(konumxEdit.text);
+timg.position.Y=StrToInt(konumyEdit.text);
+}
+
+ }
+ }}
+if (ACombo.ItemIndex==2) //ALTOP
+{
+case a of
+{
+1:
+{
+tLabel.align=ALTOP
+}
+2:
+{
+tButon.align=ALTOP
+}
+3:
+{
+tEdit.align=ALTOP
+}
+4:
+{
+timg.align=ALTOP
+}
+ }
+ }
+if (ACombo.ItemIndex==3) //ALBOTTOM
+{
+case a of
+{
+1:
+{
+tLabel.align=ALBOTTOM
+}
+2:
+{
+tButon.align=ALBOTTOM
+}
+3:
+{
+tEdit.align=ALBOTTOM
+}
+4:
+{
+timg.align=ALBOTTOM
+}
+ }
+ }
+if (ACombo.ItemIndex==4) //ALCENTER
+{
+case a of
+{
+1:
+{
+tLabel.align=ALCENTER
+}
+2:
+{
+tButon.align=ALCENTER
+}
+3:
+{
+tEdit.align=ALCENTER
+}
+4:
+{
+timg.align=ALCENTER
+}
+ }
+ }
+ if (ACombo.ItemIndex==5) //ALLEFT
+{
+case a of
+{
+1:
+{
+tLabel.align=ALLEFT
+}
+2:
+{
+tButon.align=ALLEFT
+}
+3:
+{
+tEdit.align=ALLEFT
+}
+4:
+{
+timg.align=ALLEFT
+}
+ }}
+ if (ACombo.ItemIndex==6) //ALRİGHT
+{
+case a of
+{
+1:
+{
+tLabel.align=ALRIGHT
+}
+2:
+{
+tButon.align=ALRIGHT
+}
+3:
+{
+tEdit.align=ALRIGHT
+}
+4:
+{
+timg.align=ALRIGHT
+}}
+ if (ACombo.ItemIndex==7) //ALCLİENT
+{
+case a of
+{
+1:
+{
+tLabel.align=ALclient
+}
+2:
+{
+tButon.align=ALclient
+}
+3:
+{
+tEdit.align=ALclient
+}
+4:
+{
+timg.align=ALclient
+}
+
+
+ }
+}
+
+}
+}
+void Duzenle
+{
+ if ((konumxEdit.text=='')||(konumyEdit.text=='')||(hEdit.text=='')||(wEdit.text==''))
+ {
+  ShowMessage('LÜTFEN BİLGİLERİ TAMAMLAYINIZ')
+       }
+   else
+{
+case a of
+{
+1:
+{
+tLabel.Align=Alnone;
+tLabel.position.X=StrToInt(konumxEdit.text);
+tLabel.position.Y=StrToInt(konumyEdit.text);
+tLabel.Height=StrToInt(hEdit.text);
+tLabel.Width=StrToInt(wEdit.text);
+}
+2:
+{
+tButon.position.X=StrToInt(konumxEdit.text);
+tButon.position.Y=StrToInt(konumyEdit.text);
+tButon.Height=StrToInt(hEdit.text);
+tButon.Width=StrToInt(wEdit.text);
+
+}
+3:
+{
+  tEdit.position.X=StrToInt(konumxEdit.text);
+tEdit.position.Y=StrToInt(konumyEdit.text);
+tEdit.Height=StrToInt(hEdit.text);
+tEdit.Width=StrToInt(wEdit.text);
+}
+4:
+{
+  timg.position.X=StrToInt(konumxEdit.text);
+timg.position.Y=StrToInt(konumyEdit.text);
+timg.Height=StrToInt(hEdit.text);
+timg.Width=StrToInt(wEdit.text);
+}}}}
+
+void PROSEC
+{
+
+}
+
+
+
+void BtnOnClickSol
+{
+case a of
+{
+1:
+{
+tLabel.Align=Alnone;
+tLabel.position.X=tLabel.position.X-10
+
+}
+2:
+{
+  tButon.Align=Alnone;
+tButon.position.X=tButon.position.X-10
+
+}
+3:
+{
+  tEdit.Align=Alnone;
+  tEdit.position.X= tEdit.position.X-10
+}
+4:
+{
+  timg.Align=Alnone;
+  timg.position.X=timg.position.X-10
+}}
+}
+
+void BtnOnClickSag
+{
+ case a of
+{
+1:
+{
+tLabel.Align=Alnone;
+tLabel.position.X=tLabel.position.X+10
+
+}
+2:
+{
+  tButon.Align=Alnone;
+tButon.position.X=tButon.position.X+10
+
+}
+3:
+{
+  tEdit.Align=Alnone;
+  tEdit.position.X= tEdit.position.X+10
+}
+4:
+{
+  timg.Align=Alnone;
+  timg.position.X=timg.position.X+10
+}} 
+}
+
+void BtnOnClickYuk
+{
+ case a of
+{
+1:
+{
+tLabel.Align=Alnone;
+tLabel.position.y=tLabel.position.y-10
+
+}
+2:
+{
+  tButon.Align=Alnone;
+tButon.position.y=tButon.position.y-10
+
+}
+3:
+{
+  tEdit.Align=Alnone;
+  tEdit.position.y= tEdit.position.y-10
+}
+4:
+{
+  timg.Align=Alnone;
+  timg.position.y=timg.position.y-10
+}} 
+}
+
+void BtnOnClickAsa
+{
+ case a of
+{
+1:
+{
+tLabel.Align=Alnone;
+tLabel.position.y=tLabel.position.y+10
+
+}
+2:
+{
+  tButon.Align=Alnone;
+tButon.position.y=tButon.position.y+10
+
+}
+3:
+{
+  tEdit.Align=Alnone;
+  tEdit.position.y= tEdit.position.y+10
+}
+4:
+{
+  timg.Align=Alnone;
+  timg.position.y=timg.position.y+10
+}} 
+}
+
+void BtnOnClickBuy
+{
+ case a of
+{
+1:
+{
+tLabel.Height=tLabel.Height+10;
+tLabel.Width=tLabel.Width+10
+
+}
+2:
+{
+  tButon.Height=tButon.Height+10;
+tButon.Width=tButon.Width+10
+
+}
+3:
+{
+  tEdit.Height=tEdit.Height+10;
+  tEdit.Width=tEdit.Width+10
+}
+4:
+{
+  timg.Height=timg.Height+10;
+  timg.Width=timg.Width+10
+}}   
+}
+
+void BtnOnClickKuc
+{
+case a of
+{
+1:
+{
+tLabel.Height=tLabel.Height-10;
+tLabel.Width=tLabel.Width-10
+
+}
+2:
+{
+  tButon.Height=tButon.Height-10;
+tButon.Width=tButon.Width-10
+
+}
+3:
+{
+  tEdit.Height=tEdit.Height-10;
+  tEdit.Width=tEdit.Width-10
+}
+4:
+{
+  timg.Height=timg.Height-10;
+  timg.Width=timg.Width-10
+}}     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+myForm = TClgameForm.Create(Self);
+MyForm.clSetWindowState(fwsMaximized);
+myForm.setformbgimage('https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/629a30c55cc6c7d921bf0f2d_6296062b1343b06a84c13d18_4-website-optimization-strategies-that-will-help-attract-new-users%20(1).jpg')
+
+a=0;
+
+GestureImg = myForm.AddNewImage(MyForm, 'GestureImg');
+MyForm.setImage(GestureImg,'https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/629a30c55cc6c7d921bf0f2d_6296062b1343b06a84c13d18_4-website-optimization-strategies-that-will-help-attract-new-users%20(1).jpg');
+GestureImg.Align = alCenter;
+GestureImg.Height = 800;
+GestureImg.Width = 1300;
+GestureImg.align=AlContents;
+
+
+
+tLabel=myForm.AddNewLabel(myForm,'tLabel','BAŞLIK');
+tLabel.visible=False;
+
+tButon=myForm.AddNewButton(myForm,'tButon','BUTON');
+tButon.visible=False;
+
+
+
+tEdit=myForm.addnewEdit(myForm,'tEdit','METİN KUTUSU');
+tEdit.visible=False;
+
+timg=myForm.AddNewImage(myForm,'timg');
+MyForm.setImage(timg,'https://w7.pngwing.com/pngs/58/887/png-transparent-cat-kitten-cuteness-cat-brown-tabby-kitten-household-animals-cat-like-mammal-thumbnail.png');
+timg.visible=False;
+
+MouseLbl = myForm.AddNewLabel(MyForm, 'MouseLbl','--');
+MouseLbl.Align = alBottom;
+MouseLbl.Height = 20;
+
+
+MyForm.AddNewEvent(GestureImg, tbeOnMouseDown,'onFormMouseDown'); 
+MyForm.AddNewEvent(GestureImg, tbeOnMouseUp, 'onFormMouseUp');
+MyForm.AddNewEvent(GestureImg, tbeOnMouseMove,'onFormMouseMove');
+
+
+
+konumxEdit=myForm.addnewedit(myForm,'konumxEdit','Konum X');
+konumyEdit=myForm.addnewedit(myForm,'konumyEdit','Konum Y');
+konumxEdit.Align=Alnone;
+konumyEdit.Align=Alnone;
+konumxEdit.position.X=100
+konumxEdit.position.Y=0
+konumxEdit.Height=30
+konumyEdit.position.X=200
+konumyEdit.position.Y=0
+konumyEdit.Height=30
+
+
+HEdit=myForm.addnewedit(myForm,'HEdit','YÜKSEKLİK');
+HEdit.Align=Alnone;
+HEdit.position.X=400
+HEdit.position.Y=0
+HEdit.Height=30
+
+
+Wedit=myForm.addnewedit(myForm,'Wedit','GENİŞLİK');
+Wedit.Align=Alnone;
+Wedit.position.X=500
+Wedit.position.Y=0
+Wedit.Height=30
+
+
+
+ACombo=myForm.addnewCombobox(myForm,'ACombo');
+ACombo.Align=Alnone;
+ACombo.position.X=300
+ACombo.position.Y=0
+ACombo.Height=30
+
+ACombo.Additem('ALİGN EKLE','0');
+ACombo.Additem('ALNONE','1');
+ACombo.Additem('ALTOP','2');
+ACombo.Additem('ALBOTTOM','3');
+ACombo.Additem('ALCENTER','4');
+ACombo.Additem('ALLEFT','5');
+ACombo.Additem('ALRIGHT','6');
+ACombo.Additem('ALCLIENT','7');
+
+myForm.AddNewEvent(ACombo,tbeOnchange,'alignsec');
+
+
+BilesenCombo=myForm.AddNewCombobox(myForm,'BilesenCombo');
+BilesenCombo.Additem('BİLEŞEN EKLE','0');
+BilesenCombo.Additem('LABEL','1');
+BilesenCombo.Additem('BUTON','2');
+BilesenCombo.Additem('EDİT','3');
+BilesenCombo.Additem('iMAGE','4');
+myForm.AddNewEvent(bilesenCombo,tbeOnchange,'BilesenSEC');
+myForm.AddNewEvent(bilesenCombo,tbeOnclick,'BilesenSEC');
+
+
+ SolBtn = MyForm.AddNewProButton(MyForm,'SolBtn','');
+   clComponent.SetupComponent(SolBtn,'{"Align" : "none","MarginBottom":135,"Width" :50,"Height":50}');
+   MyForm.SetImage(SolBtn,'https://cdn.pixabay.com/photo/2012/04/02/16/03/back-24838_1280.png'); 
+   MyForm.AddNewEvent(SolBtn,tbeOnClick,'BtnOnClickSol');
+SolBtn.position.x=130
+SolBtn.position.y=55
+
+SagBtn = MyForm.AddNewProButton(MyForm,'SagBtn','');
+   clComponent.SetupComponent(SagBtn,'{"Align" : "none","MarginBottom":135,"Width" :50,"Height":50}');
+   MyForm.SetImage(SagBtn,'https://cdn.pixabay.com/photo/2012/04/02/16/03/back-24838_1280.png'); 
+   MyForm.AddNewEvent(SagBtn,tbeOnClick,'BtnOnClickSag');
+SagBtn.RotationAngle = -180;
+SagBtn.position.x=220
+SagBtn.position.y=55
+
+YukariBtn = MyForm.AddNewProButton(MyForm,'YukariBtn','');
+   clComponent.SetupComponent(YukariBtn,'{"Align" : "none","MarginBottom":135,"Width" :50,"Height":50}');
+   MyForm.SetImage(YukariBtn,'https://cdn.pixabay.com/photo/2012/04/02/16/03/back-24838_1280.png'); 
+   MyForm.AddNewEvent(YukariBtn,tbeOnClick,'BtnOnClickYuk');
+YukariBtn.RotationAngle = 90;
+YukariBtn.position.x=175
+YukariBtn.position.y=30
+
+AsagiBtn = MyForm.AddNewProButton(MyForm,'AsagiBtn','');
+   clComponent.SetupComponent(AsagiBtn,'{"Align" : "none","MarginBottom":135,"Width" :50,"Height":50}');
+   MyForm.SetImage(AsagiBtn,'https://cdn.pixabay.com/photo/2012/04/02/16/03/back-24838_1280.png'); 
+   MyForm.AddNewEvent(AsagiBtn,tbeOnClick,'BtnOnClickAsa');
+AsagiBtn.RotationAngle = -90;
+AsagiBtn.position.x=175
+AsagiBtn.position.y=80
+
+BuyutBtn = MyForm.AddNewProButton(MyForm,'BuyutBtn','');
+   clComponent.SetupComponent(BuyutBtn,'{"Align" : "none","MarginBottom":135,"Width" :50,"Height":50}');
+   MyForm.SetImage(BuyutBtn,'https://png.pngtree.com/element_our/20190602/ourmid/pngtree-volume-plus-button-illustration-image_1426363.jpg'); 
+   MyForm.AddNewEvent(BuyutBtn,tbeOnClick,'BtnOnClickBuy');
+BuyutBtn.position.x=525
+BuyutBtn.position.y=35
+
+KucultBtn = MyForm.AddNewProButton(MyForm,'KucultBtn','');
+   clComponent.SetupComponent(KucultBtn,'{"Align" : "none","MarginBottom":135,"Width" :50,"Height":50}');
+   MyForm.SetImage(KucultBtn,'https://png.pngitem.com/pimgs/s/521-5219073_temporarily-not-available-not-available-icon-png-transparent.png'); 
+   MyForm.AddNewEvent(KucultBtn,tbeOnClick,'BtnOnClickKuc');
+KucultBtn.position.x=425
+KucultBtn.position.y=35
+
+DuzenleBtn=myForm.AddNewButton(myForm,'DuzenleBtn','UYGULA');
+DuzenleBtn.align=Alnone;
+DuzenleBtn.position.x=800;
+DuzenleBtn.position.y=0;
+myForm.AddNewEvent(DuzenleBtn,tbeOnclick,'Duzenle');
+
+temizle=myForm.AddNewButton(myForm,'temizle','SİL');
+temizle.align=Alnone;
+temizle.position.x=900;
+temizle.position.y=0;
+myForm.AddNewEvent(temizle,tbeOnclick,'EkranTemizle');
+konumxEdit.text='0';
+konumyEdit.text='0';
+myForm.Run;
+
+}
