@@ -1,0 +1,90 @@
+var
+MyForm:TclForm;
+Sag,Sol,Yukari ,asagi,basla   : TclButton;
+testImg : TclImage;
+
+
+
+void eylem;
+{
+testImg.position.x=testImg.position.x+20;
+}
+void eylem1;
+{
+testImg.position.x=testImg.position.x-20;
+}
+
+
+void eylem2;
+{
+testImg.position.y=testImg.position.y-20;
+}
+
+void eylem3;
+{
+testImg.position.y=testImg.position.y+20;
+}
+
+void KeyDown
+{
+  if (MyForm.clSenderKeyChar == 100)  
+ {
+  eylem;
+ 
+ }
+ if (MyForm.clSenderKeyChar == 68  
+ {
+  eylem;
+ 
+ }
+ if (MyForm.clSenderKeyChar == 97)
+ {
+  eylem1
+ 
+ }
+ if (MyForm.clSenderKeyChar == 65)
+ {
+  eylem1
+ 
+ }
+ if (MyForm.clSenderKeyChar == 87)
+ {
+ eylem2
+ }
+ if (MyForm.clSenderKeyChar == 119)
+ {
+ eylem2
+ }
+ if (MyForm.clSenderKeyChar == 115)
+ {
+ eylem3
+ }
+ if (MyForm.clSenderKeyChar == 83)
+ {
+ eylem3
+ }
+}
+
+
+
+
+
+{
+  MyForm=TclForm.create(self);
+MyForm.clSetWindowState(fwsMaximized);
+
+
+testImg = MyForm.AddNewImage(MyForm,'testImg');
+testImg.Width = 100;
+testImg.Height = 100;
+MyForm.setImage(testImg,'https://img1.pngindir.com/20180604/ez/kisspng-airplane-icon-a5-light-aircraft-computer-icons-5b157d65bbde91.8260840415281350137695.jpg');
+testImg.Align=AlNone;
+
+
+
+MyForm.AddNewEvent(MyForm, tbeOnKeyDown, 'KeyDown');
+
+
+MyForm.run;
+  
+}
